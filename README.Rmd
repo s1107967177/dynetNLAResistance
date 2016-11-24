@@ -1,0 +1,37 @@
+---
+output: github_document
+---
+
+# R/dynetNLAResistance
+
+R/dynetNLAResistance is an R package of method to resist neighbor label attack in a dynamic network.
+
+## Installation
+
+You can install the stable version of R/dynetNLAResistance from CRAN:
+
+```r
+install.packages("dynetNLAResistance")
+```
+
+## Example
+
+You can create a dynamic network by function make.virtual.dynamic.network.
+Then group it by function lw.grouping,and anonymize it by function anonymization.
+```{r block1}
+library(dynetNLAResistance)
+dynet <- make.virtual.dynamic.network()
+dynet.grouped <- lw.grouping(dynet,l = 2, w = 1)
+g5.a <- anonymization(dynet.grouped$t5, alpha = 1, beta = 2, gamma = 3)
+```
+## License
+
+MIT
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-chunkname.png"
+)
+```

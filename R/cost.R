@@ -1,3 +1,12 @@
+#' Calculate anonymization cost of two nodes.
+#'
+#' @param g A graph contains vertexs with different labels and some of which are sensitive.
+#' @param uid Name of a node with sensitive label.
+#' @param vid Name of a node with unsensitive label.
+#' @param alpha Weight of anonymization cost resulted from label generalization.
+#' @param beta Weight of anonymization cost resulted from adding edges.
+#' @param gamma Weight of anonymization cost resulted from adding nodes.
+#' @return Anonymization cost of two nodes.
 #' @export
 #' @import "igraph"
 cost <- function(g, uid, vid, alpha = 1, beta = 2, gamma = 3) {

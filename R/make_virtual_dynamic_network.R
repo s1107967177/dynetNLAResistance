@@ -1,10 +1,21 @@
+#' Make a vertex-increasing virtual dynamic network.
+#'
+#' @param network.data A data frame containing a symbolic edge list,which contains the information of whole network data.
+#' @param len Time of this dynamic network lasts.
+#' @param by The number of vertex added in network each time.
+#' @param label.types The number of label types the network possesses.
+#' @param prop.init The proportion of vertex amounts of initial network in whole network data.
+#' @param prop.sensitive The proportion of amounts of vertex with sensitive label in whole network data.
+#' @return A list of snapshots of a virtual dynamic network.
+#' @examples
+#' dynet <- make.virtual.dynamic.network()
 #' @export
 #' @import "igraph"
-make.virtual.dynamic.network <- function(file = NULL,
-  skip = 0, len = 10 ,by = 50, label.types = 100, prop.init = 0.02, prop.sensitive = 0.1) {
-  if(!is.null(file)) {
+make.virtual.dynamic.network <- function(network.data = NULL, len = 10 ,by = 5, label.types = 100,
+                                         prop.init = 0.001, prop.sensitive = 0.1) {
+  if(!is.null(network.data)) {
     #' @importFrom "utils" "read.table"
-    network <- read.table(file = file, skip = skip)
+    network <- network.data
     names(network) <- c("from", "to")
     network$from <- paste0("V", network$from)
     network$to <- paste0("V", network$to)

@@ -1,11 +1,12 @@
-#' @export
 #' @import "igraph"
+#' @import "parallel"
+#' @import "doParallel"
 global.similarity.grouping <- function(g, l, gs.table, noise, t) {
   remain <- names(sort(degree(g),decreasing = T))
   v.protect <- V(g)[V(g)$sensitive==1]$name
   len <- length(v.protect)
   group.set <- list()
-  cl <- makeForkCluster(detectCores()-1)
+  cl <- makeCluster(detectCores()-1)
   registerDoParallel(cl)
   while (length(v.protect)>0) {
     us <- v.protect[1]

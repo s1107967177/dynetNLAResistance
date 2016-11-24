@@ -1,3 +1,10 @@
+#' Anonymize two node.
+#'
+#' @param g A graph contains vertexs with different labels and some of which are sensitive.
+#' @param uid Name of a node with sensitive label.
+#' @param vid Name of a node with unsensitive label.
+#' @param noise Current amount of noise nodes.
+#' @return A list with information of anonymized network.
 #' @export
 #' @import "igraph"
 anonymize2node <- function(g , uid, vid, noise = g$noise) {
@@ -76,7 +83,6 @@ anonymize2node <- function(g , uid, vid, noise = g$noise) {
     ulabel <- strsplit(V(g)[gmatch$nuid]$label, split = " ")
     vlabel <- strsplit(V(g)[gmatch$nvid]$label, split = " ")
     union.label <- unlist(mapply(function(lu,lv) paste(union(lu,lv),collapse = " "), ulabel, vlabel))
-    # V(g)[gmatch$nuid]$label <- V(g)[gmatch$nvid]$label <- union.label
     V(g)[gmatch$nvid]$label <- union.label
   }
 
@@ -102,5 +108,5 @@ anonymize2node <- function(g , uid, vid, noise = g$noise) {
     temp <- gu; gu <- gv; gv <- temp;
     temp <- gua; gua <- gva; gva <- temp;
   }
-  return(list(gu = gu, gv = gv, guv=guv, gua = gua, gva = gva, guva=guva, ga = ga, newnoise = noise))
+  return(list(gu = gu, gv = gv, guv=guv, gua = gua, gva = gva, guva=guva, ga = ga))
 }
