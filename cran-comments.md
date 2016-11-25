@@ -1,9 +1,7 @@
 ##Resubmission
 This is a resubmission. In this version I have:
 
-*Converted the DESCRIPTION description and README.md.
-
-*More clearly identified the copyright holders in the LICENSE files.
+*Converted the DESCRIPTION title to title case.
 
 ## Test environments
 * local OS X install, R 3.3.2
