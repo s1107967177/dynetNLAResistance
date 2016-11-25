@@ -4,7 +4,7 @@ output: github_document
 
 # R/dynetNLAResistance
 
-R/dynetNLAResistance is an R package of method to resist neighbor label attack in a dynamic network.
+R/dynetNLAResistance is an R package of anonymization algorithm to resist neighbor label attack in a dynamic network.
 
 ## Installation
 

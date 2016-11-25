@@ -2,7 +2,7 @@
 R/dynetNLAResistance
 ====================
 
-R/dynetNLAResistance is an R package of method to resist neighbor label attack in a dynamic network.
+R/dynetNLAResistance is an R package of anonymization algorithm to resist neighbor label attack in a dynamic network.
 
 Installation
 ------------
@@ -24,90 +24,104 @@ dynet <- make.virtual.dynamic.network()
 dynet.grouped <- lw.grouping(dynet,l = 2, w = 1)
 ```
 
-    ## candidates number:  21  selected id:  V83259 
+    ## candidates number:  21  selected id:  V22987 
     ## Grouping t1 50%
-    ## candidates number:  19  selected id:  V101425 
+    ## candidates number:  20  selected id:  V905 
     ## Grouping t1 100%
     ## merge.groups
-    ## candidates number:  25  selected id:  V83259 
+    ## candidates number:  25  selected id:  V22987 
     ## Grouping t2 50%
-    ## candidates number:  24  selected id:  V52658 
+    ## candidates number:  25  selected id:  V40271 
     ## Grouping t2 100%
     ## merge.groups
-    ## candidates number:  28  selected id:  V12915 
-    ## Grouping t3 33.33333%
-    ## candidates number:  28  selected id:  V83259 
-    ## Grouping t3 66.66667%
-    ## candidates number:  27  selected id:  V52658 
+    ## candidates number:  30  selected id:  V64428 
+    ## Grouping t3 50%
+    ## candidates number:  29  selected id:  V40271 
     ## Grouping t3 100%
     ## merge.groups
-    ## candidates number:  33  selected id:  V107009 
-    ## Grouping t4 33.33333%
-    ## candidates number:  32  selected id:  V83259 
-    ## Grouping t4 66.66667%
-    ## candidates number:  31  selected id:  V52658 
+    ## candidates number:  35  selected id:  V64428 
+    ## Grouping t4 50%
+    ## candidates number:  35  selected id:  V40271 
     ## Grouping t4 100%
     ## merge.groups
-    ## candidates number:  38  selected id:  V107009 
+    ## candidates number:  39  selected id:  V64428 
     ## Grouping t5 33.33333%
-    ## candidates number:  38  selected id:  V83259 
+    ## candidates number:  38  selected id:  V78667 
     ## Grouping t5 66.66667%
-    ## candidates number:  37  selected id:  V52658 
+    ## candidates number:  38  selected id:  V40271 
     ## Grouping t5 100%
     ## merge.groups
-    ## candidates number:  43  selected id:  V107009 
-    ## Grouping t6 33.33333%
-    ## candidates number:  43  selected id:  V83259 
-    ## Grouping t6 66.66667%
-    ## candidates number:  42  selected id:  V52658 
+    ## candidates number:  40  selected id:  V26750 
+    ## Grouping t6 20%
+    ## candidates number:  39  selected id:  V61271 
+    ## Grouping t6 40%
+    ## candidates number:  39  selected id:  V64428 
+    ## Grouping t6 60%
+    ## candidates number:  38  selected id:  V78667 
+    ## Grouping t6 80%
+    ## candidates number:  39  selected id:  V40271 
     ## Grouping t6 100%
     ## merge.groups
-    ## candidates number:  46  selected id:  V107009 
-    ## Grouping t7 25%
-    ## candidates number:  47  selected id:  V70665 
+    ## candidates number:  43  selected id:  V26750 
+    ## Grouping t7 16.66667%
+    ## candidates number:  43  selected id:  V35010 
+    ## Grouping t7 33.33333%
+    ## candidates number:  42  selected id:  V22987 
     ## Grouping t7 50%
-    ## candidates number:  45  selected id:  V52658 
-    ## Grouping t7 75%
-    ## candidates number:  45  selected id:  V45810 
+    ## candidates number:  39  selected id:  V78667 
+    ## Grouping t7 66.66667%
+    ## candidates number:  41  selected id:  V40271 
+    ## Grouping t7 83.33333%
+    ## candidates number:  38  selected id:  V8536 
     ## Grouping t7 100%
     ## merge.groups
-    ## candidates number:  50  selected id:  V43683 
-    ## Grouping t8 20%
-    ## candidates number:  49  selected id:  V70665 
-    ## Grouping t8 40%
-    ## candidates number:  48  selected id:  V91392 
-    ## Grouping t8 60%
-    ## candidates number:  47  selected id:  V22987 
-    ## Grouping t8 80%
-    ## candidates number:  47  selected id:  V45810 
+    ## candidates number:  46  selected id:  V26750 
+    ## Grouping t8 14.28571%
+    ## candidates number:  46  selected id:  V35010 
+    ## Grouping t8 28.57143%
+    ## candidates number:  44  selected id:  V46066 
+    ## Grouping t8 42.85714%
+    ## candidates number:  45  selected id:  V22987 
+    ## Grouping t8 57.14286%
+    ## candidates number:  43  selected id:  V78667 
+    ## Grouping t8 71.42857%
+    ## candidates number:  45  selected id:  V40271 
+    ## Grouping t8 85.71429%
+    ## candidates number:  43  selected id:  V8536 
     ## Grouping t8 100%
     ## merge.groups
-    ## candidates number:  54  selected id:  V43683 
-    ## Grouping t9 20%
-    ## candidates number:  54  selected id:  V70665 
-    ## Grouping t9 40%
-    ## candidates number:  54  selected id:  V91392 
-    ## Grouping t9 60%
-    ## candidates number:  53  selected id:  V22987 
-    ## Grouping t9 80%
-    ## candidates number:  54  selected id:  V45810 
+    ## candidates number:  49  selected id:  V26750 
+    ## Grouping t9 12.5%
+    ## candidates number:  49  selected id:  V35010 
+    ## Grouping t9 25%
+    ## candidates number:  48  selected id:  V46066 
+    ## Grouping t9 37.5%
+    ## candidates number:  49  selected id:  V22987 
+    ## Grouping t9 50%
+    ## candidates number:  47  selected id:  V78667 
+    ## Grouping t9 62.5%
+    ## candidates number:  46  selected id:  V905 
+    ## Grouping t9 75%
+    ## candidates number:  48  selected id:  V40271 
+    ## Grouping t9 87.5%
+    ## candidates number:  46  selected id:  V8536 
     ## Grouping t9 100%
     ## merge.groups
-    ## candidates number:  55  selected id:  V2716 
+    ## candidates number:  53  selected id:  V26750 
     ## Grouping t10 12.5%
-    ## candidates number:  55  selected id:  V101191 
+    ## candidates number:  53  selected id:  V35010 
     ## Grouping t10 25%
-    ## candidates number:  53  selected id:  V46066 
+    ## candidates number:  52  selected id:  V46066 
     ## Grouping t10 37.5%
-    ## candidates number:  51  selected id:  V31762 
+    ## candidates number:  53  selected id:  V22987 
     ## Grouping t10 50%
-    ## candidates number:  52  selected id:  V70665 
+    ## candidates number:  51  selected id:  V78667 
     ## Grouping t10 62.5%
-    ## candidates number:  52  selected id:  V91392 
+    ## candidates number:  51  selected id:  V14096 
     ## Grouping t10 75%
-    ## candidates number:  51  selected id:  V97632 
+    ## candidates number:  51  selected id:  V40271 
     ## Grouping t10 87.5%
-    ## candidates number:  51  selected id:  V45810 
+    ## candidates number:  50  selected id:  V8536 
     ## Grouping t10 100%
     ## merge.groups
 
@@ -119,19 +133,19 @@ g5.a <- anonymization(dynet.grouped$t5, alpha = 1, beta = 2, gamma = 3)
     ## Vertex number:  43 
     ## iterating...
     ## Anonymized nodes with sensitive label:
-    ##  V84209 
+    ##  V97632 
     ## 
     ## Merged group-set's size:  2 
     ## Vertex number:  45 
     ## iterating...
     ## Anonymized nodes with sensitive label:
-    ##  V84209 V26130 
+    ##  V97632 V20247 
     ## 
     ## Merged group-set's size:  1 
-    ## Vertex number:  47 
+    ## Vertex number:  53 
     ## iterating...
     ## Anonymized nodes with sensitive label:
-    ##  V84209 V26130 V95940
+    ##  V97632 V20247 V97788
 
 License
 -------
